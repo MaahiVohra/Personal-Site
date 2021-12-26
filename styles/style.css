@@ -103,7 +103,7 @@ button:hover {
     font-size: 1.1rem;
 }
 .nav-item {
-    margin: 0.8em 1.5em;
+    margin: 0.8em 1.5%;
     text-decoration: none;
     color: white;
 }
@@ -115,7 +115,7 @@ button:hover {
 }
 
 .home {
-    margin-left: 5em;
+    margin-left: 5%;
 }
 
 .bottom-navbar {
@@ -170,7 +170,6 @@ button:hover {
     grid-template-columns: 25% 75%;
     grid-template-rows: 1.8em 1.8em;
     margin: auto;
-    transition: all 1s ease-in-out;
     width: 50%;
 }
 
@@ -213,7 +212,7 @@ button:hover {
     background-color: #eeeeee;
     font-family: "raleway", sans-serif;
     margin: 10em auto 0 auto;
-    padding: 4em;
+    padding: 4em 0;
 }
 
 .heading {
@@ -328,5 +327,15 @@ textarea {
     .bottom-container-projects {
         grid-template-columns: auto;
         width: 20em;
+    }
+    input,
+    textarea {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .middle-container-skills {
+        width: 90%;
     }
 }
