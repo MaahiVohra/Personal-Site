@@ -1,35 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <!-- Meta tags -->
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Title -->
         <title>Maahi Vohra</title>
+
+        <!-- CSS links -->
         <link rel="stylesheet" href="styles/style.css" />
-        <script src="lib/script.js"></script>
+
+        <!-- Font links -->
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap"
-            rel="stylesheet"
-        />
+
         <link
             href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap"
             rel="stylesheet"
         />
         <link
-            href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap"
             rel="stylesheet"
         />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap"
-            rel="stylesheet"
-        />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap"
-            rel="stylesheet"
-        />
+
+        <!-- Scripts -->
+        <script src="lib/script.js"></script>
         <script
             src="https://kit.fontawesome.com/93a3687fed.js"
             crossorigin="anonymous"
@@ -37,28 +35,32 @@
     </head>
     <body>
         <div id="overflow-wrap">
-            <div class="top-container" id="home">
-                <div class="welcome front">
+            <!-- HOME -->
+            <div class="home" id="home">
+                <div class="welcome">
                     Hello, I'm <span class="highlight">Maahi Vohra.</span>
                     <br />I'm a full-stack web developer.
                 </div>
-                <button class="work-link front" id="worklink">
+                <button class="work-link" onclick="clicked('work')">
                     View my work &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➤
                 </button>
             </div>
 
-            <nav class="navbar bottom-navbar front">
-                <a href="#home" class="nav-item home">HOME</a
-                ><a href="#about" class="nav-item">ABOUT</a
-                ><a href="#work" class="nav-item">WORK</a
-                ><a href="#contact" class="nav-item">CONTACT</a>
+            <!-- NAVIGATION BAR FIXED ONE-->
+            <nav class="navbar navbar-fixed">
+                <a class="nav-item nav-item-home" onclick="clicked('home')"
+                    >HOME</a
+                ><a class="nav-item" onclick="clicked('about')">ABOUT</a
+                ><a class="nav-item" onclick="clicked('work')">WORK</a
+                ><a class="nav-item" onclick="clicked('contact')">CONTACT</a>
             </nav>
 
+            <!-- ABOUT -->
             <div id="about"></div>
             <div class="heading about-title">ABOUT</div>
             <hr />
-            <div class="middle-container container">
-                <div class="middle-container-myself container">
+            <div class="about container">
+                <div class="about-myself container">
                     <img
                         class="maahi-profile-photo"
                         src="images/maahi-image.jpeg"
@@ -76,7 +78,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="middle-container-skills container">
+                <div class="about-skills container">
                     <div class="skill-name">HTML</div>
                     <div class="skill-level html">
                         <div class="current-skill-level html-level"></div>
@@ -103,10 +105,12 @@
                     </div>
                 </div>
             </div>
-            <div class="bottom-container" id="work">
+
+            <!-- WORK -->
+            <div class="work" id="work">
                 <div class="heading project-title">PROJECTS</div>
                 <hr />
-                <div class="bottom-container-projects">
+                <div class="work-projects">
                     <div class="projects project-1">
                         <img
                             src="images/projects-inquire.PNG"
@@ -127,6 +131,8 @@
                     </div>
                 </div>
             </div>
+
+            <!-- CONTACT -->
             <div class="contact">
                 <svg
                     preserveAspectRatio="none"
@@ -170,14 +176,19 @@
                     </form>
                 </div>
             </div>
-            <nav class="navbar top-navbar">
-                <a href="#home" class="nav-item home">HOME</a
-                ><a href="#about" class="nav-item">ABOUT</a
-                ><a href="#work" class="nav-item">WORK</a
-                ><a href="#contact" class="nav-item">CONTACT</a>
+
+            <!-- NAVIGATION BAR MOVEABLE -->
+            <nav class="navbar navbar-moveable">
+                <a class="nav-item nav-item-home" onclick="clicked('home')"
+                    >HOME</a
+                ><a class="nav-item" onclick="clicked('about')">ABOUT</a
+                ><a class="nav-item" onclick="clicked('work')">WORK</a
+                ><a class="nav-item" onclick="clicked('contact')">CONTACT</a>
             </nav>
+
+            <!-- FOOTER SECTION -->
             <footer>
-                <a href="#home" class="arrow-to-top">
+                <a class="arrow-to-top" onclick="clicked('home')">
                     <div class="uparrow uparrow-background"></div>
                     <i class="fas fa-chevron-circle-up fa-4x uparrow"></i>
                 </a>
@@ -207,5 +218,6 @@
             </footer>
         </div>
     </body>
+    <!--had to include it in the bottom else it doesn't work-->
     <script src="lib/scroll.js"></script>
 </html>
