@@ -172,17 +172,18 @@ button:hover {
 .about-skills{
     display: flex;
     flex-wrap: wrap;
+    gap: 1em;
     margin: auto;
 }
 
 .skill-image{
     height: 12em;
-    width: 15em;
+    width: 12em;
     margin: auto;
 }
 
 .skill-image >a> img {
-    height: 10em;
+    height: 12em;
 }
 
 .work {
@@ -203,8 +204,8 @@ button:hover {
 .work-projects {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     margin: 5em auto;
-    width: 45em;
 }
 
 .projects {
@@ -214,7 +215,6 @@ button:hover {
     overflow: hidden;
     width: 15em;
     background-color: white;
-    margin: auto;
 }
 
 .projects img {
