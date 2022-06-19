@@ -169,50 +169,20 @@ button:hover {
     width: 90%;
 }
 
-.about-skills {
-    display: grid;
-    grid-row-gap: 1em;
-    grid-template-columns: 25% 75%;
-    grid-template-rows: 1.8em 1.8em;
+.about-skills{
+    display: flex;
+    flex-wrap: wrap;
     margin: auto;
-    position: relative;
-    top: -2em;
-    width: 45%;
 }
 
-.skill-name {
-    background-color: rgb(245, 99, 37);
-    color: white;
-    padding: 0.25em 0;
+.skill-image{
+    height: 12em;
+    width: 15em;
+    margin: auto;
 }
 
-.skill-level {
-    background-color: #eeeeee;
-    height: 1.8em;
-}
-
-.current-skill-level {
-    background-color: #155263;
-    height: 1.8em;
-}
-
-.html-level {
-    width: 90%;
-}
-.css-level {
-    width: 90%;
-}
-.javascript-level {
-    width: 70%;
-}
-.react-level {
-    width: 65%;
-}
-.nodejs-level {
-    width: 50%;
-}
-.mongo-level {
-    width: 60%;
+.skill-image >a> img {
+    height: 10em;
 }
 
 .work {
@@ -231,8 +201,8 @@ button:hover {
 }
 
 .work-projects {
-    display: grid;
-    grid-template-columns: auto auto auto;
+    display: flex;
+    flex-wrap: wrap;
     margin: 5em auto;
     width: 45em;
 }
@@ -244,6 +214,7 @@ button:hover {
     overflow: hidden;
     width: 15em;
     background-color: white;
+    margin: auto;
 }
 
 .projects img {
@@ -347,8 +318,10 @@ textarea {
         flex-direction: column;
     }
     .work-projects {
-        grid-template-columns: auto;
-        width: 20em;
+        max-width: 30em;
+    }
+    .projects{
+        text-align: center;
     }
     input,
     textarea {
@@ -359,5 +332,8 @@ textarea {
 @media only screen and (max-width: 600px) {
     .about-skills {
         width: 90%;
+    }
+    .work-projects {
+        max-width: 15em;
     }
 }
